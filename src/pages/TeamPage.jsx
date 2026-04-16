@@ -5,7 +5,7 @@ const team = [
     name: 'Shubham Sharma',
     role: 'Founder | Director',
     photo: 'shubham.png',
-    bio: '',
+    bio: 'The visionary behind Enchanting Himalaya Films. With a deep connection to the mountains and a passion for authentic storytelling, he leads every project with purpose, turning real experiences into compelling visual narratives.',
   },
   {
     name: 'Yash Vardhan Jain',

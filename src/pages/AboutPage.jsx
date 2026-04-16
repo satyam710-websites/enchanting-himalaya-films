@@ -1,10 +1,12 @@
+const base = import.meta.env.BASE_URL
+
 export default function AboutPage() {
   return (
     <div className="page fade-in">
       {/* Hero */}
       <section className="page-hero about-hero">
         <div className="page-hero-bg">
-          <img src="/about-us.png" alt="" />
+          <img src={`${base}about-us.png`} alt="" />
         </div>
         <h1 className="page-title">About Us</h1>
         <div className="title-line" />
@@ -29,7 +31,7 @@ export default function AboutPage() {
       <section className="who-we-are">
         <h2 className="section-label">Who We Are</h2>
         <div className="who-we-are-img">
-          <img src="/who-we-are.png" alt="Cinematic shot" />
+          <img src={`${base}who-we-are.png`} alt="Cinematic shot" />
         </div>
         <div className="pillars">
           <div className="pillar">
@@ -52,7 +54,7 @@ export default function AboutPage() {
         <h2 className="section-label">Greeting from our Founder</h2>
         <div className="founder-content">
           <div className="founder-image">
-            <img src="/shubham.png" alt="Shubham Sharma" />
+            <img src={`${base}shubham.png`} alt="Shubham Sharma" />
           </div>
           <div className="founder-text">
             <p>
@@ -76,7 +78,7 @@ export default function AboutPage() {
       <section className="services-section">
         <h2 className="section-label">Our Services</h2>
         <div className="services-intro">
-          <img src="/our-services.png" alt="Our Services" className="services-img" />
+          <img src={`${base}our-services.png`} alt="Our Services" className="services-img" />
           <p>
             We offer end-to-end creative and production solutions, blending strategy with strong execution. Our work spans storytelling, visual content, campaigns, and digital media — focused on creating impactful content that connects and communicates effectively.
           </p>

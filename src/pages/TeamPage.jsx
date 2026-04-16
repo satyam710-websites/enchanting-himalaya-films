@@ -2,26 +2,31 @@ const team = [
   {
     name: 'Shubham Sharma',
     role: 'Founder | Director',
+    photo: '/shubham.png',
     bio: '',
   },
   {
     name: 'Yash Vardhan Jain',
     role: 'Producer',
+    photo: '/yash.png',
     bio: 'With his robust sense of knowledge for non fiction, Lifestyle, Infotainment and Documentary formats, In the span of 10 years in show making business as a Storyteller.',
   },
   {
     name: 'Parth Joshi',
     role: 'Creative Director',
+    photo: '/parth.png',
     bio: "The problem-solver at the heart of our team. Throw him any challenge, creative or otherwise, and he'll find a way to turn it into a solution, often better than expected.",
   },
   {
     name: 'Tushar Gupta',
     role: 'Director of Photography',
+    photo: '/tushar.png',
     bio: 'Our most trusted eye behind the lens. Known for guarding his camera like treasure, because for him, every frame matters and nothing is left to chance.',
   },
   {
     name: 'Shubham Kumar',
     role: 'Production Manager',
+    photo: '/shubham-kumar.png',
     bio: 'The engine that keeps everything running. From logistics to execution, nothing moves without his green signal, and once it does, it moves seamlessly.',
   },
 ]
@@ -37,8 +42,12 @@ export default function TeamPage() {
         <div className="team-grid">
           {team.map((member) => (
             <div className="team-member" key={member.name}>
-              <div className="member-photo-placeholder">
-                {member.name.charAt(0)}
+              <div className="member-photo-wrapper">
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  className="member-photo"
+                />
               </div>
               <h3>{member.name}</h3>
               <p className="role">{member.role}</p>

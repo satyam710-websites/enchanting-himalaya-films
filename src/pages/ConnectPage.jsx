@@ -2,19 +2,27 @@ export default function ConnectPage() {
   return (
     <div className="page fade-in">
       <section className="page-hero">
-        <h1 className="page-title">Connect</h1>
+        <h1 className="page-title">Connect With Us</h1>
         <div className="title-line" />
       </section>
       <section className="connect-section">
         <p className="connect-tagline">Let's create something meaningful.</p>
         <div className="connect-grid">
           <div className="connect-block">
-            <h3>Location</h3>
-            <p>Dehradun, Uttarakhand</p>
+            <h3>Phone</h3>
+            <p><a href="tel:+919927932322">+91 99279 32322</a></p>
           </div>
           <div className="connect-block">
-            <h3>Email</h3>
-            <p><a href="mailto:hello@enchantinghimalayafilms.com">hello@enchantinghimalayafilms.com</a></p>
+            <h3>E-mail</h3>
+            <p><a href="mailto:work.ehf@gmail.com">work.ehf@gmail.com</a></p>
+          </div>
+          <div className="connect-block">
+            <h3>Website</h3>
+            <p><a href="https://www.enchantinghimalayafilms.com" target="_blank" rel="noopener noreferrer">www.enchantinghimalayafilms.com</a></p>
+          </div>
+          <div className="connect-block">
+            <h3>Address</h3>
+            <p>Dehradun | Delhi</p>
           </div>
           <div className="connect-block">
             <h3>Follow</h3>

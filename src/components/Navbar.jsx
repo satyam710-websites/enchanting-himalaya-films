@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import logo from '../assets/ehf-logo.png'
 
 const navItems = [
+  { path: '/', label: 'Home' },
   { path: '/about', label: 'About Us' },
   { path: '/work', label: 'Our Work' },
   { path: '/team', label: 'The Team' },

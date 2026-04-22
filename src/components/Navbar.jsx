@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import logo from '../assets/ehf-logo.png'
 
 const navItems = [
   { path: '/', label: 'Home' },
@@ -33,9 +32,6 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar${scrolled || !isHome ? ' scrolled' : ''}`}>
-      <Link to="/" className="logo">
-        <img src={logo} alt="Enchanting Himalaya Films" />
-      </Link>
       <button
         className={`menu-toggle${menuOpen ? ' open' : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}

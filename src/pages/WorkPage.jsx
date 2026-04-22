@@ -2,6 +2,19 @@ import { useState } from 'react'
 
 const base = import.meta.env.BASE_URL
 
+const clients = [
+  'Woodburns Whisky',
+  'Pearl Academy',
+  'BITS Pilani',
+  'Nissan India',
+  'Bummer',
+  'SUYU',
+  'Eicher Motors',
+  'Royal Enfield',
+  'Saatvik Green Energy',
+  'Tata Trusts',
+]
+
 const categories = ['All', 'Brand Films', 'Digital & Social', 'Documentary & Human Stories']
 
 const projects = [
@@ -199,6 +212,23 @@ export default function WorkPage() {
             </div>
           </>
         )}
+      </section>
+
+      {/* Clientele */}
+      <section className="clientele">
+        <h2 className="section-label">Clientele</h2>
+        <div className="client-marquee">
+          <div className="client-track">
+            {[...clients, ...clients].map((name, i) => (
+              <span className="client-name" key={i}>{name}</span>
+            ))}
+          </div>
+        </div>
+        <div className="client-grid">
+          {clients.map((name, i) => (
+            <span className="client-grid-item" key={i}>{name}</span>
+          ))}
+        </div>
       </section>
     </div>
   )

@@ -25,7 +25,7 @@
   z-index: 1000;
   padding: 24px 6%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   transition: background 0.4s ease, padding 0.3s ease;
 }
@@ -164,6 +164,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.4;
+  z-index: 1;
 }
 
 .hero-fallback {

@@ -16,10 +16,10 @@ export default function ConnectPage() {
             <h3>E-mail</h3>
             <p><a href="mailto:work.ehf@gmail.com">work.ehf@gmail.com</a></p>
           </div>
-          <div className="connect-block">
+          {/* <div className="connect-block">
             <h3>Website</h3>
             <p><a href="https://www.enchantinghimalayafilms.com" target="_blank" rel="noopener noreferrer">www.enchantinghimalayafilms.com</a></p>
-          </div>
+          </div> */}
           <div className="connect-block">
             <h3>Address</h3>
             <p>Dehradun | Delhi</p>

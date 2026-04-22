@@ -5,14 +5,14 @@ export default function Home() {
   return (
     <>
       <section className="hero" id="home">
-        <div className="hero-video">
-          <iframe
-            src="https://www.youtube.com/embed/UixG2nQxXe4?autoplay=1&mute=1&loop=1&playlist=UixG2nQxXe4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            title="Hero background"
-          />
-        </div>
+        <video
+          className="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          src="https://res.cloudinary.com/dniv0gqil/video/upload/v1776889533/video_bf8e6s.mp4"
+        />
         <div className="hero-fallback" />
         <div className="hero-content">
           <img src={logo} alt="Enchanting Himalaya Films" className="hero-logo" />

@@ -1,21 +1,18 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/ehf-logo.png'
-import heroVideo from '../assets/video.mp4'
 
 export default function Home() {
   return (
     <>
       <section className="hero" id="home">
-        <video
-          className="hero-video"
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster=""
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+        <div className="hero-video">
+          <iframe
+            src="https://www.youtube.com/embed/UixG2nQxXe4?autoplay=1&mute=1&loop=1&playlist=UixG2nQxXe4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            title="Hero background"
+          />
+        </div>
         <div className="hero-fallback" />
         <div className="hero-content">
           <img src={logo} alt="Enchanting Himalaya Films" className="hero-logo" />

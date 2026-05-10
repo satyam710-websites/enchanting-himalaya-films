@@ -6,7 +6,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="page-hero about-hero">
         <div className="page-hero-bg">
-          <img src={`${base}about-us.png`} alt="" />
+          <img src={`${base}about-us.jpg`} alt="" />
         </div>
         <h1 className="page-title">About Us</h1>
         <div className="title-line" />

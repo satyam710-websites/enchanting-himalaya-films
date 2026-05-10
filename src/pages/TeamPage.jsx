@@ -35,7 +35,7 @@ const team = [
     name: 'Ichchhit Kimothi',
     role: 'Copywriter',
     photo: 'ichchhit.jpeg',
-    bio: "A professor by profession and a storyteller at heart. His writing adds depth and character to every piece of communication, thoughtful, nuanced, and effortlessly witty. And while his ideas are flexible, his wardrobe isn't you'll almost never spot him in a pair of jeans.",
+    bio: "A professor by profession, a storyteller at heart. Thoughtful, nuanced, and effortlessly witty, just don't expect to catch him in jeans.",
   },
 ]
 

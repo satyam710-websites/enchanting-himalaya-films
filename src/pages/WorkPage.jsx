@@ -1,7 +1,5 @@
 import { useState } from 'react'
 
-const base = import.meta.env.BASE_URL
-
 const clients = [
   'Woodburns Whisky',
   'Pearl Academy',
@@ -15,135 +13,162 @@ const clients = [
   'Tata Trusts',
 ]
 
-const categories = ['All', 'Brand Films', 'Digital & Social', 'Documentary & Human Stories']
+const categories = ['All', 'Brand Films', 'Documentaries & Human Stories', 'Other']
 
-const projects = [
-  // Brand Films (Commercials)
-  { title: 'Woodburns Whisky', category: 'Brand Films', client: 'Woodburns', type: 'brand', videoLink: 'https://www.youtube.com/watch?v=UixG2nQxXe4' },
-  { title: 'Nissan | Mother\'s Day', category: 'Brand Films', client: 'Nissan India', type: 'brand', videoLink: 'https://www.youtube.com/watch?v=KnQnwZa2k98' },
-  { title: 'Bummer Apparel', category: 'Brand Films', client: 'Bummer', type: 'brand', videoLink: 'https://www.youtube.com/watch?v=jpqx1x5Vklc' },
-  { title: 'Pearl Academy', category: 'Brand Films', client: 'Pearl Academy', type: 'brand', videoLink: 'https://www.youtube.com/watch?v=KHx3EGSJoAs' },
-  { title: 'SUYU', category: 'Brand Films', client: 'SUYU', type: 'brand', videoLink: 'https://www.youtube.com/watch?v=7QxtUdhYn2s' },
-  { title: 'BITS Pilani WILP', category: 'Brand Films', client: 'BITS Pilani', type: 'brand', videoLink: 'https://www.youtube.com/watch?v=KJHZjR3Vdlg' },
-  { title: 'Eicher Motors | Driver\'s Day', category: 'Brand Films', client: 'Eicher Motors', type: 'brand', videoLink: 'https://www.youtube.com/watch?v=Ny1TKOmmQTo' },
-
-  // Digital & Social - Featured
+const sections = [
   {
-    title: 'Royal Enfield Motowave X2',
-    category: 'Digital & Social',
-    client: 'Royal Enfield',
-    type: 'featured',
-    image: 'social-media-content.png',
-    objective: 'To create a visually compelling campaign for the Motowave X2 helmet that reflects Royal Enfield\'s spirit of adventure, safety, and riding culture.',
-    execution: 'We conceptualized and executed the complete campaign, capturing the product in real riding environments. The focus was on blending cinematic visuals with authentic motorcycling moments, highlighting both performance and lifestyle.',
-    output: 'A series of campaign films and digital assets showcasing the helmet across dynamic terrains, designed for digital and social media platforms.',
-  },
-  {
-    title: 'Royal Enfield | Service Campaign',
-    category: 'Digital & Social',
-    client: 'Royal Enfield',
-    type: 'featured',
-    videoLink: 'https://www.youtube.com/shorts/9itXzTIu1dI',
-    objective: 'To highlight the service and support ecosystem of Royal Enfield, showcasing reliability and rider assistance beyond just the product.',
-    execution: 'The campaign was conceptualized to bring out the often-overlooked service backbone of the brand through real, on-ground storytelling. The narrative focused on authenticity, blending real moments with visually engaging storytelling.',
-    output: 'A set of 8 reels along with supporting digital content, designed for social media distribution.',
-  },
-
-  // Brand Films - Featured
-  {
-    title: 'Saatvik Green Energy Limited',
     category: 'Brand Films',
-    client: 'Saatvik',
-    type: 'featured',
-    videoLink: 'https://www.youtube.com/watch?v=ZmqlTIxCsiY',
-    objective: 'To create compelling films that establish Saatvik as a trusted and evolving leader in the solar energy space.',
-    execution: 'Working within a tight one-week timeline, we conceptualized and delivered two distinct films — one on manufacturing excellence and one capturing the brand\'s decade-long journey.',
-    output: 'Two brand films, one centered on manufacturing capabilities and the other on the company\'s legacy, crafted for digital and corporate communication.',
+    label: null,
+    items: [
+      { title: 'Woodburns Whisky', videoLink: 'https://youtu.be/UixG2nQxXe4' },
+      { title: 'UPES | AI-First University', videoLink: 'https://youtu.be/eLbhseVydsA' },
+      { title: 'UPES | AI-First University', videoLink: 'https://youtu.be/-txYO7RGiSQ' },
+      { title: 'BITS Pilani WILP', videoLink: 'https://youtu.be/IYCB1WUXkCo' },
+      { title: 'Pearl Academy', videoLink: 'https://youtu.be/KHx3EGSJoAs' },
+      { title: 'BUMMER Apparel', videoLink: 'https://youtu.be/7DXJ8BL9Pkw' },
+      { title: 'SUYU', videoLink: 'https://youtu.be/7QxtUdhYn2s' },
+      { title: 'BITS Pilani WILP', videoLink: 'https://youtu.be/KJHZjR3Vdlg' },
+      { title: 'Six Senses Fort Barwara', videoLink: 'https://youtu.be/Dx0jixECOZM' },
+    ],
   },
-
-  // Documentary & Human Stories - Featured
   {
-    title: 'Against The Wind',
-    category: 'Documentary & Human Stories',
-    client: 'India-Australia Co-production',
-    type: 'featured',
-    videoLink: 'https://www.youtube.com/watch?v=N91q7BUysWc',
-    objective: 'To capture the emotional journey of a solo rider seeking connection and meaning in an increasingly digital and disconnected world.',
-    execution: 'Set against the dramatic landscapes of Ladakh, the film follows Jan as she rides to Khardung La. We focused on creating an immersive visual narrative that blends the scale of the terrain with intimate human moments.',
-    output: 'A sizzle film that encapsulates the spirit of exploration, human connection, and the raw beauty of Ladakh.',
+    category: 'Brand Films',
+    label: 'Saatvik Solar',
+    items: [
+      { title: 'Saatvik Green Energy', videoLink: 'https://youtu.be/ZmqlTIxCsiY' },
+      { title: 'Celebrating 10 Years of Purpose & Progress', videoLink: 'https://youtu.be/oNj-S6owfV8' },
+      { title: 'The Saatvik Journey', videoLink: 'https://youtu.be/vWI6Z8mUrxU' },
+    ],
   },
-
-  // Documentary grid items
-  { title: 'Himalayan Yak', category: 'Documentary & Human Stories', client: '', type: 'documentary', videoLink: 'https://www.youtube.com/watch?v=SXTSiUqEtBw' },
-  { title: 'New Horizon | Tata Trusts', category: 'Documentary & Human Stories', client: 'Tata Trusts', type: 'documentary', videoLink: 'https://www.youtube.com/watch?v=tv3pWXMSV9k' },
-  { title: 'The Wisdom Corridor Project', category: 'Documentary & Human Stories', client: '', type: 'documentary', videoLink: 'https://www.youtube.com/watch?v=O-Sv_YUuIss' },
-  { title: 'Dalhousie', category: 'Documentary & Human Stories', client: '', type: 'documentary', videoLink: 'https://www.youtube.com/watch?v=BvSm5ET_008' },
-  { title: 'Rains | Tata Trusts', category: 'Documentary & Human Stories', client: 'Tata Trusts', type: 'documentary', videoLink: 'https://www.youtube.com/watch?v=F54TWnCrr2A' },
-  { title: 'Sivok Rangpo Railway Project', category: 'Documentary & Human Stories', client: '', type: 'documentary', videoLink: 'https://www.youtube.com/watch?v=AbBgNkLEc68' },
+  {
+    category: 'Brand Films',
+    label: 'Reels',
+    items: [
+      { title: 'Royal Enfield | Service', videoLink: 'https://youtube.com/shorts/qy2Fb6vHYdI' },
+      { title: 'Royal Enfield | Happy Diwali', videoLink: 'https://youtube.com/shorts/unQHh2XL-5U' },
+      { title: 'Kicks Machine', videoLink: 'https://youtube.com/shorts/0t9CDA-Cd4s' },
+      { title: 'Bummer', videoLink: 'https://www.instagram.com/reel/DEFOo-py53K/' },
+      { title: 'Bummer', videoLink: 'https://youtube.com/shorts/Z11ln38wJO4' },
+    ],
+  },
+  {
+    category: 'Brand Films',
+    label: 'Indian Military Academy',
+    items: [
+      { title: 'Multi-Activity Display at IMA Dehradun', videoLink: "https://www.youtube.com/watch?v=6eLRqLCHSe8" },
+      { title: 'Bonding Exercise | IMA', videoLink: "https://youtu.be/ABN-AjuYXfo" },
+      { title: 'Training Warriors | IMA', videoLink: "https://youtu.be/p9Vsw03fQP0" },
+      { title: 'Valour and Wisdom | IMA', videoLink: "https://youtu.be/5pSdcEwzsYQ" },
+      { title: 'Moulding a Future Indian Army Officer | IMA', videoLink: "https://youtu.be/ICqKH2HdwK8" },
+    ],
+  },
+  {
+    category: 'Documentaries & Human Stories',
+    label: null,
+    items: [
+      { title: 'Proactive IRCON', videoLink: 'https://youtu.be/5PijEk859SY' },
+      { title: 'Himalayan Yak', videoLink: 'https://youtu.be/SXTSiUqEtBw' },
+      { title: 'New Horizon | Tata Trusts', videoLink: 'https://youtu.be/tv3pWXMSV9k' },
+      { title: 'Rains | Tata Trusts', videoLink: 'https://youtu.be/F54TWnCrr2A' },
+      { title: 'Sivok Rangpo Railway Project', videoLink: 'https://youtu.be/AbBgNkLEc68' },
+    ],
+  },
+  {
+    category: 'Documentaries & Human Stories',
+    label: 'National Institute of Urban Affairs | MoHUA',
+    items: [
+      { title: 'Pitch Film | The WIN Programme', videoLink: "https://www.youtube.com/watch?v=6d55Va8yrYQ" },
+      { title: 'Module 1 | Prerequisites | The WIN Programme', videoLink: "https://youtu.be/z19NgbZZ2BY" },
+      { title: 'Module 2 | Sample Collection | The WIN Programme', videoLink: "https://youtu.be/BejUCwrY_Uc" },
+      { title: 'Module 4 | Governance | The WIN Programme', videoLink: "https://youtu.be/kYq_sraOAco" },
+    ],
+  },
+  {
+    category: 'Other',
+    label: 'Gradright | Masters of The Future',
+    items: [
+      { title: 'gradright and biswakalyanrath', videoLink: 'https://www.instagram.com/reel/C5-PGtPBRaB/' },
+      { title: 'Top 30 Masters in USA Aspirants Attends Masters Of The Future | GradRight', videoLink: "https://youtu.be/zmnNCPQlxow?list=PLNoyonXH2A1y70FdOav2g43_PBg8dEd92" },
+      { title: "India's Top 30 Students at Masters of the Future 2024 | GradRight X Washington University, St Louis", videoLink: "https://youtu.be/mpxLKIQ7MQU?list=PLNoyonXH2A1y70FdOav2g43_PBg8dEd92" },
+      { title: 'What kind of students does Rutgers Business School look for? | Masters of the Future 2024', videoLink: "https://youtu.be/VktP6yCB4do?list=PLNoyonXH2A1y70FdOav2g43_PBg8dEd92" },
+      { title: 'Masters of the Future: Student Experiences | Your Guide to Study Abroad, Loans, & Scholarships', videoLink: "https://youtu.be/O4LZ35AQq3o?list=PLNoyonXH2A1y70FdOav2g43_PBg8dEd92" },
+    ],
+  },
+  {
+    category: 'Other',
+    label: 'McCain Food Service | BBDO',
+    items: [
+      { title: "Chef Veena Arora's review on the new appetizer in town McCain V Crisper", videoLink: "https://youtu.be/l50uQtyd7do" },
+      { title: 'Chef Ankur Sharma reviews the new appetizer in town McCain V Crisper', videoLink: "https://youtu.be/2rpcOWyTmhQ" },
+      { title: "Chef Shalini Kapoor's testimonial for the new appetizer in town McCain V Crisper", videoLink: "https://youtu.be/Gimn5wvOip0" },
+      { title: "Chef Akanksha Sharma's review on the new appetizer in town McCain V Crisper", videoLink: "https://youtu.be/fwr7ftsZUJU" },
+    ],
+  },
+  {
+    category: 'Other',
+    label: 'Virasat | Cultural Festival',
+    items: [
+      { title: "Virasat 2022 | The Wadali's", videoLink: "https://youtu.be/bqhRkHrK2vw" },
+      { title: 'Father Puranchand and son Lakhvinder Wadali | Virasat 2022 | Sufi Singing', videoLink: "https://youtu.be/pZMtufAO1wU" },
+      { title: "Ghazals by Talat Aziz | Virasat '22", videoLink: "https://youtu.be/FR_MMiv4fi4" },
+      { title: "Parween Sultana ji | Virasat Dehradun '22", videoLink: "https://youtu.be/EyUBxudN53o" },
+    ],
+  },
+  {
+    category: 'Other',
+    label: 'Rishikesh Festival 2023',
+    items: [
+      { title: 'RISHIKESH FESTIVAL: DAY 1 | Glimpses of the Curtain Raiser', videoLink: "https://youtu.be/9crTWrm3mHk" },
+      { title: 'RISHIKESH FESTIVAL 2023 — DAY 2', videoLink: "https://youtu.be/MRuP9n8ZEvc" },
+      { title: "Rishikesh Festival '23: Final Show Down", videoLink: "https://youtu.be/C8Zh3DccSqA" },
+    ],
+  },
+  {
+    category: 'Other',
+    label: 'Music Videos',
+    items: [
+      { title: 'Bairiya (Official Video)', videoLink: 'https://youtu.be/Mji5cPEaqQA' },
+    ],
+  },
 ]
 
 function getYouTubeThumbnail(url) {
   if (!url) return null
   const shorts = url.match(/shorts\/([^?&]+)/)
   if (shorts) return `https://img.youtube.com/vi/${shorts[1]}/hqdefault.jpg`
-  const match = url.match(/(?:v=|\/)([\w-]{11})/)
+  const match = url.match(/(?:v=|youtu\.be\/)([^?&]{11})/)
   return match ? `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg` : null
 }
 
-function FeaturedCard({ project }) {
-  const thumb = getYouTubeThumbnail(project.videoLink)
-  return (
-    <div className="featured-work">
-      <div className="featured-image">
-        {project.image ? (
-          <img src={`${base}${project.image}`} alt={project.title} />
-        ) : thumb ? (
-          <a href={project.videoLink} target="_blank" rel="noopener noreferrer">
-            <div className="thumb-wrapper">
-              <img src={thumb} alt={project.title} />
-              <div className="play-icon">&#9654;</div>
-            </div>
-          </a>
-        ) : (
-          <div className="featured-placeholder" />
-        )}
+function WorkCard({ item }) {
+  const thumb = getYouTubeThumbnail(item.videoLink)
+  const content = (
+    <>
+      {thumb ? (
+        <img src={thumb} alt={item.title} className="work-card-thumb" />
+      ) : (
+        <div className="work-card-placeholder">
+          <span>{item.title}</span>
+        </div>
+      )}
+      <div className="card-overlay">
+        <h3>{item.title}</h3>
       </div>
-      <div className="featured-details">
-        <h3>{project.title}</h3>
-        {project.client && <p className="featured-client">{project.client}</p>}
-        {project.objective && (
-          <div className="featured-block">
-            <span className="featured-label">Objective</span>
-            <p>{project.objective}</p>
-          </div>
-        )}
-        {project.execution && (
-          <div className="featured-block">
-            <span className="featured-label">Execution</span>
-            <p>{project.execution}</p>
-          </div>
-        )}
-        {project.output && (
-          <div className="featured-block">
-            <span className="featured-label">Output</span>
-            <p>{project.output}</p>
-          </div>
-        )}
-        {project.videoLink && (
-          <a href={project.videoLink} className="watch-btn" target="_blank" rel="noopener noreferrer">
-            Watch Film
-          </a>
-        )}
-      </div>
-    </div>
+    </>
   )
+  if (item.videoLink) {
+    return (
+      <a className="work-card" href={item.videoLink} target="_blank" rel="noopener noreferrer">
+        {content}
+      </a>
+    )
+  }
+  return <div className="work-card">{content}</div>
 }
 
 export default function WorkPage() {
   const [active, setActive] = useState('All')
-  const filtered = active === 'All' ? projects : projects.filter(p => p.category === active)
-  const featured = filtered.filter(p => p.type === 'featured')
-  const grid = filtered.filter(p => p.type !== 'featured')
+  const filtered = active === 'All' ? sections : sections.filter(s => s.category === active)
 
   return (
     <div className="page fade-in">
@@ -165,53 +190,18 @@ export default function WorkPage() {
           ))}
         </div>
 
-        {/* Featured Projects */}
-        {featured.length > 0 && (
-          <div className="featured-list">
-            <h2 className="subsection-title">Featured Work</h2>
-            {featured.map((project, i) => (
-              <FeaturedCard key={i} project={project} />
-            ))}
-          </div>
-        )}
-
-        {/* Grid Projects */}
-        {grid.length > 0 && (
-          <>
-            {active === 'Digital & Social' && (
-              <p className="work-subtitle">Reels | Short Form Content | Campaign Snippets</p>
-            )}
-            {active === 'Documentary & Human Stories' && (
-              <h2 className="subsection-title" style={{ marginTop: 48 }}>Documentary Work | Social Impact Films | Cultural Stories</h2>
+        {filtered.map((section, si) => (
+          <div key={si} style={{ marginTop: si > 0 ? 56 : 0 }}>
+            {section.label && (
+              <h2 className="subsection-title">{section.label}</h2>
             )}
             <div className="work-grid">
-              {grid.map((project, i) => {
-                const thumb = getYouTubeThumbnail(project.videoLink)
-                return (
-                  <a
-                    className="work-card"
-                    key={i}
-                    href={project.videoLink || '#'}
-                    target={project.videoLink ? '_blank' : undefined}
-                    rel="noopener noreferrer"
-                  >
-                    {thumb ? (
-                      <img src={thumb} alt={project.title} className="work-card-thumb" />
-                    ) : (
-                      <div className="work-card-placeholder">
-                        <span>{project.title}</span>
-                      </div>
-                    )}
-                    <div className="card-overlay">
-                      <h3>{project.title}</h3>
-                      {project.client && <p>{project.client}</p>}
-                    </div>
-                  </a>
-                )
-              })}
+              {section.items.map((item, ii) => (
+                <WorkCard key={ii} item={item} />
+              ))}
             </div>
-          </>
-        )}
+          </div>
+        ))}
       </section>
 
       {/* Clientele */}
@@ -233,3 +223,4 @@ export default function WorkPage() {
     </div>
   )
 }
+

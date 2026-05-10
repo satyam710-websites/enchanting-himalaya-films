@@ -4,12 +4,14 @@ export default function AboutPage() {
   return (
     <div className="page fade-in">
       {/* Hero */}
-      <section className="page-hero about-hero">
-        <div className="page-hero-bg">
-          <img src={`${base}about-us.jpg`} alt="" />
+      <section className="about-hero">
+        <div className="about-hero-img-wrap">
+          <img src={`${base}about1.png`} alt="About Us" />
         </div>
-        <h1 className="page-title">About Us</h1>
-        <div className="title-line" />
+        <div className="about-hero-overlay">
+          <h1 className="page-title">About Us</h1>
+          <div className="title-line" />
+        </div>
       </section>
 
       {/* About Intro */}

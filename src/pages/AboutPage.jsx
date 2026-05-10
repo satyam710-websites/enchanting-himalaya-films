@@ -16,13 +16,19 @@ export default function AboutPage() {
       <section className="about-intro">
         <div className="about-intro-inner">
           <p>
-            Enchanting Himalaya Films is an end-to-end creative agency and production house specializing in branding, visual storytelling, and digital communication. With roots in the mountains, we bring a nuanced understanding of landscapes, culture, and communities, enabling us to create authentic and impactful narratives for destination promotion.
+            Enchanting Himalaya Films is an end-to-end creative agency and production house shaping stories at the intersection of branding, culture, and visual storytelling.
           </p>
           <p>
-            Our expertise spans brand development, large-scale photography and videography, and integrated content development. We combine strategic thinking with strong execution capabilities to deliver high-quality creative assets and campaigns aligned with evolving audience behaviour.
+            Rooted in the Himalayas, we bring an intuitive understanding of landscapes, communities, and lived experiences allowing us to craft narratives that feel authentic, immersive, and deeply human.
           </p>
           <p>
-            Backed by a diverse and experienced team, we are committed to delivering consistent, scalable, and result-oriented solutions. Our focus is on building compelling destination identities and driving sustained engagement through meaningful and well-crafted communication.
+            Our work spans brand campaign development, film production, and integrated digital content. We combine strategic insight with on-ground execution to create high-quality visual assets and campaigns that resonate with evolving audiences.
+          </p>
+          <p>
+            Driven by a diverse and experienced team, we focus on delivering consistent, scalable, and result-oriented solutions. From building distinctive destination identities to creating impactful communication, our approach is grounded in clarity, craft, and purpose.
+          </p>
+          <p>
+            At its core, our work is about telling stories that stay.
           </p>
         </div>
       </section>
@@ -51,7 +57,7 @@ export default function AboutPage() {
 
       {/* Founder */}
       <section className="founder-section">
-        <h2 className="section-label">Greeting from our Founder</h2>
+        <h2 className="section-label">Greetings from our Founder</h2>
         <div className="founder-content">
           <div className="founder-image">
             <img src={`${base}shubham.png`} alt="Shubham Sharma" />
@@ -61,7 +67,7 @@ export default function AboutPage() {
               Enchanting Himalaya Films was built on the belief that storytelling can create both impact and connection. My journey across Uttarakhand, engaging closely with its people, culture, and landscapes, shaped a deep respect for authentic, human stories.
             </p>
             <p>
-              These experiences instilled a sense of responsibility — to create work that is honest, meaningful, and rooted in real perspectives. Today, this philosophy drives everything we do.
+              These experiences instilled a sense of responsibility to create work that is honest, meaningful, and rooted in real perspectives. Today, this philosophy drives everything we do.
             </p>
             <p>
               At Enchanting Himalaya Films, we strive to craft stories that connect emotionally, deliver with purpose, and leave a lasting impact.
@@ -80,15 +86,15 @@ export default function AboutPage() {
         <div className="services-intro">
           <img src={`${base}our-services.png`} alt="Our Services" className="services-img" />
           <p>
-            We offer end-to-end creative and production solutions, blending strategy with strong execution. Our work spans storytelling, visual content, campaigns, and digital media — focused on creating impactful content that connects and communicates effectively.
+            We offer end-to-end creative and production solutions, blending strategy with strong execution. Our work spans storytelling, visual content, campaigns, and digital media focused on creating impactful content that connects and communicates effectively.
           </p>
         </div>
         <div className="services-list">
-          <div className="service-item">Brand Films & Visual Storytelling</div>
-          <div className="service-item">Photography & Videography</div>
-          <div className="service-item">Creative Direction & Campaigns</div>
-          <div className="service-item">Social Media Content & Management</div>
-          <div className="service-item">Design & Visual Communication</div>
+          <div className="service-item">Brand Video Production</div>
+          <div className="service-item">Documentary Production</div>
+          <div className="service-item">Corporate Video Production</div>
+          <div className="service-item">TV Commercial Production</div>
+          {/* <div className="service-item">Design & Visual Communication</div> */}
         </div>
       </section>
 

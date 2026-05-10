@@ -16,8 +16,9 @@ export default function Home() {
         <div className="hero-fallback" />
         <div className="hero-content">
           <img src={logo} alt="Enchanting Himalaya Films" className="hero-logo" />
-          <h1>Enchanting Himalaya Films</h1>
-          {/* <p className="tagline">Visual Stories &nbsp;|&nbsp; Events &nbsp;|&nbsp; Films</p> */}
+          <p className="hero-eyebrow"><em>Video Production Company IND</em></p>
+          <h1>Great ideas deserve<br /><em>Great execution.</em></h1>
+          <p className="hero-sub">Storytellers from the mountains</p>
           <div className="hero-cta">
             <Link to="/work" className="cta-button">View Our Work</Link>
             <Link to="/connect" className="cta-button cta-outline">Get in Touch</Link>

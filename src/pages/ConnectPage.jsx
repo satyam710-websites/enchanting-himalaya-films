@@ -27,9 +27,8 @@ export default function ConnectPage() {
           <div className="connect-block">
             <h3>Follow</h3>
             <div className="social-links">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a href="https://vimeo.com" target="_blank" rel="noopener noreferrer">Vimeo</a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+              <a href="https://www.instagram.com/enchantinghimalaya_films?igsh=azZ2ZnYxMmJxMnR5" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.youtube.com/@enchantinghimalayafilms" target="_blank" rel="noopener noreferrer">YouTube</a>
             </div>
           </div>
         </div>

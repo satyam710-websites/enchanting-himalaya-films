@@ -31,6 +31,12 @@ const team = [
     photo: 'shubham-kumar.png',
     bio: 'The engine that keeps everything running. From logistics to execution, nothing moves without his green signal, and once it does, it moves seamlessly.',
   },
+  {
+    name: 'Ichchhit Kimothi',
+    role: 'Copywriter',
+    photo: 'ichchhit.jpeg',
+    bio: "A professor by profession and a storyteller at heart. His writing adds depth and character to every piece of communication, thoughtful, nuanced, and effortlessly witty. And while his ideas are flexible, his wardrobe isn't you'll almost never spot him in a pair of jeans.",
+  },
 ]
 
 export default function TeamPage() {
